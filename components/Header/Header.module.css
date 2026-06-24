@@ -2,11 +2,11 @@
   display: flex;
   margin: 12px auto;
   gap: 12px;
-  background-color: #16161a;
+  background-color: var(--headerBackground);
   padding: 6px;
   border-radius: 100px;
-  color: #f1f1f4;
-  border: 1px solid #2b2b2e;
+  color: var(--text);
+  border: 1px solid var(--headerBorderColor);
   align-items: center;
   overflow-x: hidden;
   font-size: 1rem;
@@ -21,16 +21,29 @@
 
 .headerItemSelected {
   font-weight: 600;
-  background-color: #191a1f;
+  background-color: var(--headerBackgroundActive);
   padding: 6px 18px;
   border-radius: 100px;
   transition: font-weight 0.3s ease-out;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 516px) {
+  .headerContainer {
+    gap: 2px;
+    font-size: 0.9rem;
+  }
+  .headerItem {
+    padding: 6px 19px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
   .headerContainer {
     gap: 2px;
     font-size: 0.8rem;
+  }
+  .headerItem {
+    padding: 6px 10px;
   }
 }

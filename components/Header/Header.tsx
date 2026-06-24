@@ -2,8 +2,11 @@
 
 import styles from "./Header.module.css";
 import { useState } from "react";
+import { useTheme } from "@/hooks/useTheme";
+import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 export default function Header() {
+  const { theme, toggleTheme } = useTheme();
   const items = [
     { label: "Home", destination: "#hero" },
     { label: "Stack", destination: "#hero" },
@@ -26,6 +29,13 @@ export default function Header() {
           {item.label}
         </span>
       ))}
+      <span className={styles.headerItem} onClick={() => toggleTheme()}>
+        {theme === "dark" ? (
+          <MdDarkMode size={20} />
+        ) : (
+          <MdLightMode size={20} />
+        )}
+      </span>
     </div>
   );
 }
