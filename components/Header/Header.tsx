@@ -1,9 +1,14 @@
 "use client";
 
 import styles from "./Header.module.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTheme } from "@/hooks/useTheme";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
+
+type PillStyle = {
+  width: number;
+  left: number;
+};
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -14,20 +19,65 @@ export default function Header() {
     { label: "Projects", destination: "#projects" },
   ];
   const [selected, setSelected] = useState("Home");
+  const [pillStyle, setPillStyle] = useState<PillStyle>({ width: 0, left: 0 });
+  const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  const handleClick = (item: string, index: number) => {
+    setSelected(item);
+    const el = itemRefs.current[index];
+    if (el) {
+      setPillStyle({
+        width: el.offsetWidth,
+        left: el.offsetLeft,
+      });
+    }
+  };
+
+  useEffect(() => {
+    const el = itemRefs.current[0];
+    if (el) setPillStyle({ width: el.offsetWidth, left: el.offsetLeft });
+  }, []);
+
+  const updatePill = () => {
+    const selectedIndex = items.findIndex((item) => item.label === selected);
+    const el = itemRefs.current[selectedIndex];
+
+    if (el) {
+      setPillStyle({
+        width: el.offsetWidth,
+        left: el.offsetLeft,
+      });
+    }
+  };
+
+  useEffect(() => {
+    updatePill();
+
+    window.addEventListener("resize", updatePill);
+
+    return () => {
+      window.removeEventListener("resize", updatePill);
+    };
+  }, [selected]);
+
   return (
-    <div className={styles.headerContainer}>
-      {items.map((item) => (
-        <span
+    <nav className={styles.headerContainer}>
+      <div
+        className={styles.pill}
+        style={{ width: pillStyle.width, left: pillStyle.left }}
+      />
+      {items.map((item, index) => (
+        <button
+          data-label={item.label}
+          ref={(el) => {
+            itemRefs.current[index] = el;
+          }}
           key={item.label}
-          className={
-            selected == item.label
-              ? styles.headerItemSelected
-              : styles.headerItem
-          }
-          onClick={() => setSelected(item.label)}
+          className={`${styles.headerItem} ${selected == item.label && styles.headerItemSelected}`}
+          onClick={() => handleClick(item.label, index)}
         >
           {item.label}
-        </span>
+        </button>
       ))}
       <span className={styles.headerItem} onClick={() => toggleTheme()}>
         {theme === "dark" ? (
@@ -36,6 +86,6 @@ export default function Header() {
           <MdLightMode size={20} />
         )}
       </span>
-    </div>
+    </nav>
   );
 }
