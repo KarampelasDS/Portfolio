@@ -1,0 +1,45 @@
+.heroContainer {
+  display: flex;
+  margin: 5rem auto;
+  width: 1060px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.heroTopTitle {
+  font-size: 1.6rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: normal;
+  margin: 1rem 0rem;
+}
+
+.heroSubtitle {
+  font-size: 1.6rem;
+  color: var(--text-muted);
+  margin: 1rem 0rem;
+  font-weight: 500;
+}
+
+.heroInfo {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 1.5rem 0rem;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.heroImage img {
+  border-radius: 100%;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}

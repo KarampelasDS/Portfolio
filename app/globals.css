@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ededed;
+  --background: #f7f6f1;
   --foreground: #0a0a0a;
   --headerBackground: #eeecea;
   --headerBackgroundActive: #fff;
   --headerBorderColor: #e1dfdd;
   --text: #2b2b32;
+  --accent: #7046cf;
+  --text-muted: #a4a4ab;
 }
 
 [data-theme="dark"] {
@@ -16,6 +18,8 @@
   --headerBackgroundActive: #202125;
   --headerBorderColor: #2b2b2e;
   --text: #f1f1f4;
+  --accent: #a58cfc;
+  --text-muted: #a4a4ab;
 }
 
 body {
