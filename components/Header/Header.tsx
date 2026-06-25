@@ -62,30 +62,32 @@ export default function Header() {
 
   return (
     <nav className={styles.headerContainer}>
-      <div
-        className={styles.pill}
-        style={{ width: pillStyle.width, left: pillStyle.left }}
-      />
-      {items.map((item, index) => (
-        <button
-          data-label={item.label}
-          ref={(el) => {
-            itemRefs.current[index] = el;
-          }}
-          key={item.label}
-          className={`${styles.headerItem} ${selected == item.label && styles.headerItemSelected}`}
-          onClick={() => handleClick(item.label, index)}
-        >
-          {item.label}
-        </button>
-      ))}
-      <span className={styles.headerItem} onClick={() => toggleTheme()}>
-        {theme === "dark" ? (
-          <MdDarkMode size={20} />
-        ) : (
-          <MdLightMode size={20} />
-        )}
-      </span>
+      <div className={styles.headerItems}>
+        <div
+          className={styles.pill}
+          style={{ width: pillStyle.width, left: pillStyle.left }}
+        />
+        {items.map((item, index) => (
+          <button
+            data-label={item.label}
+            ref={(el) => {
+              itemRefs.current[index] = el;
+            }}
+            key={item.label}
+            className={`${styles.headerItem} ${selected == item.label && styles.headerItemSelected}`}
+            onClick={() => handleClick(item.label, index)}
+          >
+            {item.label}
+          </button>
+        ))}
+        <span className={styles.headerItem} onClick={() => toggleTheme()}>
+          {theme === "dark" ? (
+            <MdDarkMode size={20} />
+          ) : (
+            <MdLightMode size={20} />
+          )}
+        </span>
+      </div>
     </nav>
   );
 }
