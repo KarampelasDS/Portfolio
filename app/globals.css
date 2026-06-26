@@ -8,8 +8,10 @@
   --headerBorderColor: #e1dfdd;
   --text: #2b2b32;
   --accent: #7046cf;
-  --accent-hover: #584d70;
+  --accent-hover: #8769ca;
   --text-muted: #51525b;
+  --border: #cacad1;
+  --secondaryBackground: #e7e7eb;
 }
 
 [data-theme="dark"] {
@@ -19,9 +21,11 @@
   --headerBackgroundActive: #202125;
   --headerBorderColor: #2b2b2e;
   --text: #f1f1f4;
-  --accent: #a58cfc;
-  --accent-hover: #b39efd;
+  --accent: #8b68db;
+  --accent-hover: #8769ca;
   --text-muted: #a4a4ab;
+  --border: #232324;
+  --secondaryBackground: #23232a;
 }
 
 body {

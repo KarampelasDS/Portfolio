@@ -1,5 +1,6 @@
 .headerContainer {
-  position: relative;
+  position: sticky;
+  top: 12px;
   display: flex;
   margin: 12px auto;
   gap: 12px;

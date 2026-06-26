@@ -1,15 +1,21 @@
 .heroContainer {
   display: flex;
-  margin: 5rem auto;
+  margin: 5rem auto auto auto;
   width: 1060px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4rem;
 }
 
 .heroTopTitle {
   font-size: 1.6rem;
   color: var(--accent);
   font-weight: 500;
+}
+
+.heroEmoji {
+  font-size: 2rem;
 }
 
 .heroTitle {
@@ -43,4 +49,8 @@
   width: 280px;
   height: 280px;
   object-fit: cover;
+  box-shadow:
+    0 8px 18px
+      color-mix(in srgb, var(--headerBackgroundActive) 25%, transparent),
+    0 2px 6px rgb(0 0 0 / 0.2);
 }

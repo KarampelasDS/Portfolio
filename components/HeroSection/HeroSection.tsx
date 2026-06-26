@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div>
         <div className={styles.heroTopTitle}>
           <span>Hi, I&apos;m Dimitris Karampelas</span>
-          <span>👋</span>
+          <span className={styles.heroEmoji}>👋</span>
         </div>
         <h1 className={styles.heroTitle}>
           I build web experiences
