@@ -6,4 +6,9 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: background 0.15s ease-in;
+}
+.buttonContainer:hover {
+  background-color: var(--hover-bg);
+  transition: background 0.15s ease-in;
 }

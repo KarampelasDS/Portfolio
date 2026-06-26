@@ -25,6 +25,7 @@ export default function HeroSection() {
             backgroundColor="var(--accent)"
             textColor="var(--background)"
             fontSize="1rem"
+            hoverBackgroundColor="var(--accent-hover)"
           >
             Download CV
             <MdOutlineFileDownload size={20} />
