@@ -41,7 +41,7 @@ export default function HeroSection() {
       </div>
       <div className={styles.heroImage}>
         <Image
-          key={"test"}
+          key={"hero"}
           loading="eager"
           alt="Profile Images"
           src="/ProfilePicture.png"

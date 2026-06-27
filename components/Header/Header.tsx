@@ -80,13 +80,13 @@ export default function Header() {
             {item.label}
           </button>
         ))}
-        <span className={styles.headerItem} onClick={() => toggleTheme()}>
+        <button className={styles.headerItem} onClick={() => toggleTheme()}>
           {theme === "dark" ? (
             <MdDarkMode size={20} />
           ) : (
             <MdLightMode size={20} />
           )}
-        </span>
+        </button>
       </div>
     </nav>
   );

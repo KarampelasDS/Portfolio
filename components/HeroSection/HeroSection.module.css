@@ -1,7 +1,8 @@
 .heroContainer {
   display: flex;
   margin: 5rem auto auto auto;
-  width: 1060px;
+  max-width: 1060px;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--border);
@@ -54,4 +55,9 @@
       color-mix(in srgb, var(--headerBackgroundActive) 25%, transparent),
     0 2px 6px rgb(0 0 0 / 0.2);
   margin-right: 1rem;
+}
+
+@media only screen and (max-width: 874px) {
+  .heroContainer {
+  }
 }

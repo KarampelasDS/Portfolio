@@ -15,17 +15,17 @@
 }
 
 [data-theme="dark"] {
-  --background: #0a0a0a;
+  --background: #0d0d10;
   --foreground: #ededed;
-  --headerBackground: #16161a;
-  --headerBackgroundActive: #202125;
+  --headerBackground: #2e2f38;
+  --headerBackgroundActive: #191a1f;
   --headerBorderColor: #2b2b2e;
   --text: #f1f1f4;
   --accent: #8b68db;
-  --accent-hover: #8769ca;
+  --accent-hover: #9078c4;
   --text-muted: #a4a4ab;
   --border: #232324;
-  --secondaryBackground: #16161a;
+  --secondaryBackground: #191a1f;
 }
 
 body {
