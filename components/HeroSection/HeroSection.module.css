@@ -46,8 +46,8 @@
 
 .heroImage img {
   border-radius: 100%;
-  width: 330px;
-  height: 330px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   box-shadow:
     0 8px 18px
