@@ -2,14 +2,73 @@
 
 import styles from "./ExperienceSection.module.css";
 import { useState } from "react";
+import ExperienceItem from "./ExperienceItem/ExperienceItem";
 
 type PillStyle = {
   left: string;
 };
 
 export default function ExperienceSection() {
-  const [tab, setTab] = useState<string>();
+  const [tab, setTab] = useState<string>("Work");
   const [pillStyle, setPillStyle] = useState<PillStyle>({ left: "0%" });
+
+  const workItems = [
+    {
+      title: "COSMOTE TELEKOM",
+      subtitle: "Frontend Engineer",
+      description:
+        "Worked across two teams simultaneously on one of Greece's highest-traffic platforms serving millions of users annually. Within the frontend team, continued driving the COSMOTE to COSMOTE TELEKOM rebrand migration, collaborating closely with design to bring over 600 pages to a new design system with updated visual identity, colour schemes, and responsive media. Additionally joined the fullstack team, taking ownership of critical user-facing React components, working directly from design handoffs through to production in close collaboration with backend engineers.",
+      startDate: "Apr 2025",
+      endDate: "Present",
+      image: "/CosmoteTelekom.png",
+    },
+    {
+      title: "COSMOTE TELEKOM",
+      subtitle: "Frontend Engineer Intern",
+      description:
+        "Contributed to live production features from day one, working across HTML, CSS, JavaScript and CMS-driven pages within a large legacy codebase. Began work on the COSMOTE to COSMOTE TELEKOM rebrand, a migration of over 600 pages to a new design system, carrying that work through to the FTE role.",
+      startDate: "Oct 2024",
+      endDate: "Apr 2025",
+      image: "/CosmoteTelekom.png",
+    },
+  ];
+
+  const educationItems = [
+    {
+      title: "Meta Front-End Developer ",
+      subtitle: "Meta · 9 courses",
+      description:
+        "React, advanced JavaScript, HTML and CSS in depth, version control, UX/UI principles, and coding interview preparation.",
+      startDate: "Issued 2025",
+      image: "/Meta.png",
+    },
+    {
+      title: "Microsoft UX Design",
+      subtitle: "Microsoft · 4 courses",
+      description:
+        "User research, information architecture, wireframing, prototyping, visual design, and accessibility considerations.",
+      startDate: "Issued 2024",
+      image: "/Microsoft.png",
+    },
+    {
+      title: "WCAG Compliance: Web Accessibility Best Practices",
+      subtitle: "Coursera",
+      description:
+        "Web accessibility standards, WCAG success criteria, and best practices for building inclusive, compliant web experiences.",
+      startDate: "Issued 2025",
+      image: "/Coursera.png",
+    },
+    {
+      title: "SAEK DYPA Galatsi ",
+      subtitle:
+        "Computer Application Technician · Multimedia / Web Designer-Developer / Video Games",
+      description:
+        "Web development, programming fundamentals, multimedia applications, database design, and internet technologies.",
+      startDate: "Oct 2022",
+      endDate: "Jun 2024",
+      image: "/GraduationCapImage.png",
+    },
+  ];
 
   const handleClick = (tab: string) => {
     setTab(tab);
@@ -29,14 +88,42 @@ export default function ExperienceSection() {
           </button>
           <button
             className={styles.experienceToggleButton}
-            onClick={() => handleClick("Experience")}
+            onClick={() => handleClick("Education")}
           >
             Education
           </button>
         </div>
       </div>
-      {tab == "Work" && <div className={styles.experienceWork}></div>}
-      {tab == "Education" && <div className={styles.experienceEducation}></div>}
+      {tab == "Work" && (
+        <div className={styles.experienceWork}>
+          {workItems.map((item) => (
+            <ExperienceItem
+              key={item.title + item.subtitle}
+              title={item.title}
+              subtitle={item.subtitle}
+              startDate={item.startDate}
+              endDate={item?.endDate}
+              description={item.description}
+              image={item.image}
+            />
+          ))}
+        </div>
+      )}
+      {tab == "Education" && (
+        <div className={styles.experienceEducation}>
+          {educationItems.map((item) => (
+            <ExperienceItem
+              key={item.title + item.subtitle}
+              title={item.title}
+              subtitle={item.subtitle}
+              startDate={item.startDate}
+              endDate={item?.endDate}
+              description={item.description}
+              image={item.image}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .heroContainer {
   display: flex;
-  margin: 5rem auto auto auto;
+  margin: 5rem auto 0rem auto;
   max-width: 1060px;
   width: 100%;
   justify-content: space-between;

@@ -21,7 +21,7 @@
   justify-content: space-between;
   font-weight: 600;
   background-color: var(--headerBackground);
-  border-radius: 12px;
+  border-radius: 100px;
   padding: 6px 6px;
   position: relative;
   border: 1px solid var(--border);
@@ -31,7 +31,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  border-radius: 12px;
+  border-radius: 100px;
   padding: 6px 6px;
   position: relative;
 }
@@ -40,9 +40,10 @@
   margin: auto;
   cursor: pointer;
   width: 100%;
-  border-radius: 12px;
-  padding: 8px 8px;
+  border-radius: 100px;
+  padding: 4px 4px;
   z-index: 1;
+  font-size: 1.2rem;
 }
 
 .pill {
@@ -50,7 +51,7 @@
   background-color: var(--headerBackgroundActive);
   width: 50%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 100px;
   top: 0;
   left: 0;
   z-index: 0;
@@ -61,4 +62,32 @@
   transition:
     left 0.25s ease,
     width 0.25s ease;
+}
+
+.experienceWork {
+  position: relative;
+  width: 99%;
+  background-color: var(--headerBackgroundActive);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  place-self: center;
+}
+
+.experienceWork::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(1rem + 0.5rem + 24px);
+  width: 2px;
+  background-color: var(--border);
+}
+
+.experienceEducation {
+  position: relative;
+  width: 99%;
+  place-self: center;
+  background-color: var(--headerBackgroundActive);
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }

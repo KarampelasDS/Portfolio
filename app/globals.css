@@ -17,7 +17,7 @@
 [data-theme="dark"] {
   --background: #0d0d10;
   --foreground: #ededed;
-  --headerBackground: #2e2f38;
+  --headerBackground: #0d0d10;
   --headerBackgroundActive: #191a1f;
   --headerBorderColor: #2b2b2e;
   --text: #f1f1f4;

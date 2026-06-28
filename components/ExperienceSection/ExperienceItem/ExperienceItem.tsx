@@ -27,20 +27,24 @@ export default function ExperienceItem({
             loading="lazy"
             alt={title}
             src={image}
-            width={100}
-            height={100}
+            width={50}
+            height={50}
           />
         </div>
-        <div className={styles.experienceItemTitles}>
-          <h3>{title}</h3>
-          <h4>{subtitle}</h4>
-        </div>
-        <div className={styles.experienceItemDate}>
-          <span>{startDate}</span>
-          {endDate && <span> - {endDate}</span>}
+        <div className={styles.experienceItemMain}>
+          <div className={styles.experienceItemInfo}>
+            <div className={styles.experienceItemTitles}>
+              <h3>{title}</h3>
+              <h4>{subtitle}</h4>
+            </div>
+            <div className={styles.experienceItemDate}>
+              <span>{startDate}</span>
+              {endDate && <span> - {endDate}</span>}
+            </div>
+          </div>
+          <div className={styles.experienceItemDescription}>{description}</div>
         </div>
       </div>
-      <div className={styles.experienceItemDescription}>{description}</div>
     </div>
   );
 }
