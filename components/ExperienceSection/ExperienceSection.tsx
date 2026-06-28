@@ -105,6 +105,7 @@ export default function ExperienceSection() {
               endDate={item?.endDate}
               description={item.description}
               image={item.image}
+              variant="work"
             />
           ))}
         </div>
@@ -120,6 +121,7 @@ export default function ExperienceSection() {
               endDate={item?.endDate}
               description={item.description}
               image={item.image}
+              variant="education"
             />
           ))}
         </div>

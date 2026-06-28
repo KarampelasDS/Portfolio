@@ -8,6 +8,7 @@ type ExperienceItemProps = {
   description: string;
   startDate: string;
   endDate?: string;
+  variant?: "work" | "education";
 };
 
 export default function ExperienceItem({
@@ -17,9 +18,14 @@ export default function ExperienceItem({
   description,
   startDate,
   endDate,
+  variant = "work",
 }: ExperienceItemProps) {
   return (
-    <div className={styles.experienceItemContainer}>
+    <div
+      className={`${styles.experienceItemContainer} ${
+        variant === "work" ? styles.work : styles.education
+      }`}
+    >
       <div className={styles.experienceItemHeader}>
         <div className={styles.experienceItemImage}>
           <Image

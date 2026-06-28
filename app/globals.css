@@ -11,7 +11,9 @@
   --accent-hover: #8769ca;
   --text-muted: #51525b;
   --border: #cacad1;
+  --border-bright: #ababb1;
   --secondaryBackground: #fff;
+  --trail: #565661;
 }
 
 [data-theme="dark"] {
@@ -25,7 +27,9 @@
   --accent-hover: #9078c4;
   --text-muted: #a4a4ab;
   --border: #232324;
+  --border-bright: #2e2e30;
   --secondaryBackground: #191a1f;
+  --trail: #f1f1f4;
 }
 
 body {

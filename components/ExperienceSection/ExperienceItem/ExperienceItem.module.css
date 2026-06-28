@@ -3,23 +3,29 @@
   flex-direction: column;
   max-width: 1060px;
   width: 100%;
-  padding: 1rem;
+  padding: 1.5rem 1rem 1rem 0.5rem;
 }
 
 .experienceItemHeader {
   display: flex;
   width: 100%;
+  gap: 1rem;
 }
 
 .experienceItemMain {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0rem 0.5rem;
 }
 
-.experienceItemContainer:not(:last-child) .experienceItemMain {
-  border-bottom: 1px solid var(--border);
+.experienceItemContainer.work:not(:last-child) .experienceItemMain {
+  border-bottom: 1px solid var(--border-bright);
+  padding-bottom: 1rem;
+}
+
+.experienceItemContainer.education:not(:last-child) {
+  border-bottom: 1px solid var(--border-bright);
+  padding-bottom: 1rem;
 }
 
 .experienceItemInfo {
@@ -46,14 +52,21 @@
 }
 
 .experienceItemImage img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   margin: 0rem 0.5rem;
   position: relative;
   z-index: 1;
+  margin-top: 5px;
+  box-shadow:
+    0 8px 18px
+      color-mix(in srgb, var(--headerBackgroundActive) 25%, transparent),
+    0 2px 6px rgb(0 0 0 / 0.2);
 }
 
 .experienceItemDescription {
-  margin: 1rem 1rem;
+  margin: 0.5rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
