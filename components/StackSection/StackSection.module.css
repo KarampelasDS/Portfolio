@@ -5,7 +5,6 @@
   width: 1060px;
   align-items: start;
   gap: 1.5rem;
-  border-bottom: 1px solid var(--border);
   padding-bottom: 4rem;
 }
 

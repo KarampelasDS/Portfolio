@@ -1,0 +1,24 @@
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem auto;
+  max-width: 1060px;
+  width: 100%;
+  align-items: start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.projectsTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 1rem 0rem 0rem;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 24px;
+  width: 100%;
+}
