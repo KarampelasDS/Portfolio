@@ -8,7 +8,7 @@ export default function ProjectsSection() {
       description:
         "A social-first recipe platform where food lovers share, discover and save recipes.",
       url: "test",
-      image: "/ProjectHeroImages/dishmeister.png",
+      image: "/ProjectHeroImages/DishmeisterImageHero.png",
       stack: ["React 19", "TypeScript", "Vite", "Supabase", "PWA"],
       liveLink: "test",
       sourceLink: "test",
@@ -18,7 +18,7 @@ export default function ProjectsSection() {
       description:
         "Create, share and manage lists with friends and family.Manage your groceries,wishlist etc. in sync!",
       url: "test",
-      image: "/ProjectHeroImages/lystmate.png",
+      image: "/ProjectHeroImages/LystMateImageHero.png",
       stack: [
         "Next.js 16",
         "TypeScript",
@@ -35,7 +35,7 @@ export default function ProjectsSection() {
       description:
         "Match your Spotify playlists to Beat Saber custom maps and download them automatically.",
       url: "test",
-      image: "/ProjectHeroImages/tunesaver.png",
+      image: "/ProjectHeroImages/TuneSaverImageHero.png",
       stack: [
         "Electron",
         "React",
@@ -51,7 +51,7 @@ export default function ProjectsSection() {
       description:
         "An Offline, Privacy-First Android app to track multi-currency accounts, income, and expenses.",
       url: "test",
-      image: "/ProjectHeroImages/walletlogger.png",
+      image: "/ProjectHeroImages/WalletLoggerImageHero.jpg",
       stack: ["React Native", "Expo", "SQLite", "Android"],
       liveLink: "test",
       sourceLink: "test",
