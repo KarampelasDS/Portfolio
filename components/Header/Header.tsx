@@ -38,9 +38,6 @@ export default function Header() {
     }
 
     if (Math.abs(targetY - window.scrollY) > 2) {
-      // Mute the spy for the whole programmatic scroll. It stays muted until
-      // the user scrolls themselves (see the input listeners below), so no
-      // timing/overshoot/layout-shift edge case can flip the pill mid-glide.
       isClickScrolling.current = true;
       window.scrollTo({ top: targetY, behavior: "smooth" });
     }

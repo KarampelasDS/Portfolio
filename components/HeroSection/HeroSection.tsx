@@ -1,3 +1,4 @@
+"use client";
 import Button from "../Button/Button";
 import SocialLink from "../SocialLink/SocialLink";
 import styles from "./HeroSection.module.css";
@@ -55,6 +56,12 @@ export default function HeroSection() {
             border="solid 1px var(--text-muted)"
             textColor="var(--text-muted)"
             fontSize="1rem"
+            onClickFunction={() => {
+              const el = document.querySelector("#experience");
+              if (!el) return;
+              const targetY = el.getBoundingClientRect().top + window.scrollY;
+              window.scrollTo({ top: targetY, behavior: "smooth" });
+            }}
           >
             Experience
           </Button>

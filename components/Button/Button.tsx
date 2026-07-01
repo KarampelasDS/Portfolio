@@ -9,6 +9,7 @@ type ButtonProps = {
   border?: string;
   hoverBackgroundColor?: string;
   fontSize?: string;
+  onClickFunction?: () => void;
 };
 
 export default function Button({
@@ -18,10 +19,12 @@ export default function Button({
   hoverBackgroundColor,
   fontSize,
   children,
+  onClickFunction,
 }: ButtonProps) {
   return (
     <>
       <button
+        onClick={onClickFunction}
         onMouseEnter={(e) =>
           (e.currentTarget.style.backgroundColor = hoverBackgroundColor ?? "")
         }
