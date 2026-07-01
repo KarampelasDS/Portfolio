@@ -1,0 +1,120 @@
+.footerWrapper {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid var(--border);
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0.5rem;
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footerImage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+.mug {
+  width: 28px;
+  height: 28px;
+}
+
+.steam {
+  position: absolute;
+  bottom: 92%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 15px;
+  overflow: visible;
+}
+
+.steam path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 9 26;
+  stroke-dashoffset: 9;
+  opacity: 0;
+  transform-origin: center bottom;
+}
+
+.steam1 {
+  animation: steamRise 3.1s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.steam2 {
+  animation: steamRise 3.7s ease-in-out infinite;
+  animation-delay: 0.9s;
+}
+
+.steam3 {
+  animation: steamRise 2.8s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+@keyframes steamRise {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 9;
+    transform: translateY(2px) scaleX(0.85);
+  }
+  25% {
+    opacity: 0.55;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: -22;
+    transform: translateY(-4px) scaleX(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .steam1,
+  .steam2,
+  .steam3 {
+    animation: none;
+  }
+  .steam path {
+    opacity: 0.35;
+    stroke-dashoffset: 0;
+    stroke-dasharray: none;
+  }
+}
+
+.footerName {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.footerSubtext {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1rem;
+  font-family: "JetBrains Mono";
+  color: var(--text-muted);
+}
