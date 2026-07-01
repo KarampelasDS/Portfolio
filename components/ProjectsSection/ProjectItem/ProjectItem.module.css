@@ -73,3 +73,42 @@
 .projectItemActionsSpacer {
   margin-left: auto;
 }
+
+@media only screen and (max-width: 500px) {
+  .projectItemImage {
+    width: 450px;
+    height: 300px;
+  }
+  .projectItemContainer {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .projectItemImage {
+    width: 400px;
+    height: 300px;
+  }
+  .projectItemContainer {
+    width: 400px;
+  }
+  .projectItemActions a button {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .projectItemImage {
+    width: 410px;
+    height: 300px;
+  }
+  .projectItemContainer {
+    width: 360px;
+  }
+  .projectItemActions a button {
+    font-size: 0.65rem !important;
+  }
+  .projectItemActions button {
+    font-size: 0.65rem !important;
+  }
+}

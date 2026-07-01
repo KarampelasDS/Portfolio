@@ -118,3 +118,11 @@
   font-family: "JetBrains Mono";
   color: var(--text-muted);
 }
+
+@media only screen and (max-width: 1060px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}

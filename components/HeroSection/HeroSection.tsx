@@ -9,7 +9,7 @@ import { MdMailOutline } from "react-icons/md";
 
 export default function HeroSection() {
   return (
-    <div className={styles.heroContainer}>
+    <div id="home" className={styles.heroContainer}>
       <div>
         <div className={styles.heroTopTitle}>
           <span>Hi, I&apos;m Dimitris Karampelas</span>

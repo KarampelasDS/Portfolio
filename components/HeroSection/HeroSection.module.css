@@ -93,7 +93,31 @@
   margin-right: 1rem;
 }
 
-@media only screen and (max-width: 874px) {
+@media only screen and (max-width: 1060px) {
   .heroContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    width: 100% !important;
+  }
+  .heroButtons {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .heroInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .heroContainer {
+    padding: 0rem 1rem 4rem;
+    align-items: center;
+  }
+  .heroImage img {
+    margin: 0;
+    padding: 0;
   }
 }

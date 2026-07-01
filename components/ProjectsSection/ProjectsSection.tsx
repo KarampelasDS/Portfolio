@@ -59,7 +59,7 @@ export default function ProjectsSection() {
     },
   ];
   return (
-    <div className={styles.projectsContainer}>
+    <div id="projects" className={styles.projectsContainer}>
       <h2 className={styles.projectsTitle}>Selected Projects</h2>
       <div className={styles.projectsGrid}>
         {items.map((item) => (

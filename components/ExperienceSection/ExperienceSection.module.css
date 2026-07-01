@@ -99,3 +99,42 @@
     transparent 95%
   );
 }
+
+@media only screen and (max-width: 1060px) {
+  .experienceContainer {
+    width: 100%;
+    padding: 0rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .experienceWork::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(1rem + 1rem + 29px);
+    width: 2px;
+    background: linear-gradient(
+      transparent 3%,
+      var(--trail) 20%,
+      transparent 95%
+    );
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .experienceWork::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(1rem + 1rem + 29px);
+    width: 2px;
+    background: linear-gradient(
+      transparent 2%,
+      var(--trail) 20%,
+      transparent 95%
+    );
+  }
+}

@@ -75,7 +75,7 @@ export default function ExperienceSection() {
     tab == "Work" ? setPillStyle({ left: "0" }) : setPillStyle({ left: "50%" });
   };
   return (
-    <div className={styles.experienceContainer}>
+    <div id="experience" className={styles.experienceContainer}>
       <h2 className={styles.experienceTitle}>Experience</h2>
       <div className={styles.experienceToggle}>
         <div className={styles.experienceToggleButtons}>

@@ -24,7 +24,7 @@ export default function StackSection() {
   ];
 
   return (
-    <div className={styles.stackContainer}>
+    <div id="stack" className={styles.stackContainer}>
       <h2 className={styles.stackTitle}>Core Stack</h2>
       <div className={styles.stackGrid}>
         {items.map((item) => (

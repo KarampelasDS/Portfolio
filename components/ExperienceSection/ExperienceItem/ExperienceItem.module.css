@@ -70,3 +70,12 @@
   color: var(--text-muted);
   font-size: 0.9rem;
 }
+
+@media only screen and (max-width: 470px) {
+  .experienceItemContainer {
+    padding: 1rem 0rem;
+  }
+  .experienceItemDate {
+    font-size: 0.7rem;
+  }
+}
