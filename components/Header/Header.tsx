@@ -38,12 +38,10 @@ export default function Header() {
     }
 
     if (Math.abs(targetY - window.scrollY) > 2) {
+      // Mute the spy for the whole programmatic scroll. It stays muted until
+      // the user scrolls themselves (see the input listeners below), so no
+      // timing/overshoot/layout-shift edge case can flip the pill mid-glide.
       isClickScrolling.current = true;
-      const release = () => {
-        isClickScrolling.current = false;
-      };
-      window.addEventListener("scrollend", release, { once: true });
-      window.setTimeout(release, 1000);
       window.scrollTo({ top: targetY, behavior: "smooth" });
     }
   };
@@ -85,38 +83,45 @@ export default function Header() {
 
     if (sections.length === 0) return;
 
-    const ratios = new Map<Element, number>();
+    const pickActive = () => {
+      if (isClickScrolling.current) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          ratios.set(
-            entry.target,
-            entry.isIntersecting ? entry.intersectionRatio : 0,
-          );
-        });
+      const line = window.innerHeight * 0.2;
+      let current = sections[0].label;
+      for (const s of sections) {
+        if (s.el.getBoundingClientRect().top <= line) current = s.label;
+      }
 
-        if (isClickScrolling.current) return;
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+      if (atBottom) current = sections[sections.length - 1].label;
 
-        let best: Element | null = null;
-        let bestRatio = 0;
-        ratios.forEach((ratio, el) => {
-          if (ratio > bestRatio) {
-            bestRatio = ratio;
-            best = el;
-          }
-        });
+      setSelected((prev) => (prev === current ? prev : current));
+    };
 
-        if (best) {
-          const match = sections.find((s) => s.el === best);
-          if (match) setSelected(match.label);
-        }
-      },
-      { rootMargin: "0px 0px -80% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] },
-    );
+    const observer = new IntersectionObserver(pickActive, {
+      rootMargin: "0px 0px -80% 0px",
+      threshold: [0, 0.25, 0.5, 0.75, 1],
+    });
 
     sections.forEach((s) => observer.observe(s.el));
-    return () => observer.disconnect();
+
+    const releaseOnUserInput = () => {
+      isClickScrolling.current = false;
+    };
+    window.addEventListener("wheel", releaseOnUserInput, { passive: true });
+    window.addEventListener("touchstart", releaseOnUserInput, {
+      passive: true,
+    });
+    window.addEventListener("keydown", releaseOnUserInput);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("wheel", releaseOnUserInput);
+      window.removeEventListener("touchstart", releaseOnUserInput);
+      window.removeEventListener("keydown", releaseOnUserInput);
+    };
   }, []);
 
   return (
