@@ -52,19 +52,15 @@ export default function HeroSection() {
             Download CV
             <MdOutlineFileDownload size={20} />
           </Button>
-          <Button
-            border="solid 1px var(--text-muted)"
-            textColor="var(--text-muted)"
-            fontSize="1rem"
-            onClickFunction={() => {
-              const el = document.querySelector("#experience");
-              if (!el) return;
-              const targetY = el.getBoundingClientRect().top + window.scrollY;
-              window.scrollTo({ top: targetY, behavior: "smooth" });
-            }}
-          >
-            Experience
-          </Button>
+          <a href="https://calendly.com/24dimitris/30min" target="_blank">
+            <Button
+              border="solid 1px var(--text-muted)"
+              textColor="var(--text-muted)"
+              fontSize="1rem"
+            >
+              Book a call
+            </Button>
+          </a>
         </div>
       </div>
       <div className={styles.heroImage}>
