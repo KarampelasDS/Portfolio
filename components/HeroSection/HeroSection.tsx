@@ -1,7 +1,11 @@
 import Button from "../Button/Button";
+import SocialLink from "../SocialLink/SocialLink";
 import styles from "./HeroSection.module.css";
 import Image from "next/image";
 import { MdOutlineFileDownload } from "react-icons/md";
+import { SiGithub } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa6";
+import { MdMailOutline } from "react-icons/md";
 
 export default function HeroSection() {
   return (
@@ -19,7 +23,24 @@ export default function HeroSection() {
         <h2 className={styles.heroSubtitle}>
           Full-stack engineer with a frontend soul.
         </h2>
-        <div className={styles.heroInfo}>📍 Athens, Greece</div>
+        <div className={styles.heroInfo}>
+          📍 Athens, Greece
+          <SocialLink
+            href="https://www.linkedin.com/in/dimitriskarampelas/"
+            target="_blank"
+          >
+            <FaLinkedin />
+            LinkedIn
+          </SocialLink>
+          <SocialLink href="https://github.com/KarampelasDS" target="_blank">
+            <SiGithub />
+            GitHub
+          </SocialLink>
+          <SocialLink href="mailto:24dimitris@gmail.com">
+            <MdMailOutline style={{ fontSize: "1.2rem" }} />
+            Email
+          </SocialLink>
+        </div>
         <div className={styles.heroButtons}>
           <Button
             backgroundColor="var(--accent)"

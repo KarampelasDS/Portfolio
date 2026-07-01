@@ -13,6 +13,7 @@ type ProjectItemProps = {
   stack: string[];
   liveLink: string;
   sourceLink: string;
+  ctaText?: string;
 };
 
 export default function ProjectItem({
@@ -23,6 +24,7 @@ export default function ProjectItem({
   stack,
   liveLink,
   sourceLink,
+  ctaText,
 }: ProjectItemProps) {
   return (
     <div className={styles.projectItemContainer}>
@@ -47,22 +49,26 @@ export default function ProjectItem({
         </div>
       </div>
       <div className={styles.projectItemActions}>
-        <Button
-          backgroundColor="var(--accent)"
-          textColor="#fff"
-          hoverBackgroundColor="var(--accent-hover)"
-          fontSize="0.9rem"
-        >
-          <FiExternalLink /> Visit site
-        </Button>
-        <Button
-          border="1px solid var(--border)"
-          hoverBackgroundColor="var(--headerBackground)"
-          fontSize="0.9rem"
-        >
-          <SiGithub />
-          Code
-        </Button>
+        <a href={liveLink} target="_blank" rel="noopener noreferrer">
+          <Button
+            backgroundColor="var(--accent)"
+            textColor="#fff"
+            hoverBackgroundColor="var(--accent-hover)"
+            fontSize="0.9rem"
+          >
+            <FiExternalLink /> {ctaText ? ctaText : "Visit site"}
+          </Button>
+        </a>
+        <a href={sourceLink} target="_blank" rel="noopener noreferrer">
+          <Button
+            border="1px solid var(--border)"
+            hoverBackgroundColor="var(--headerBackground)"
+            fontSize="0.9rem"
+          >
+            <SiGithub />
+            Code
+          </Button>
+        </a>
         <div className={styles.projectItemActionsSpacer}>
           <Button
             border="1px solid var(--border)"

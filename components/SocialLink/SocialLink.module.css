@@ -1,0 +1,11 @@
+.socialLinkContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+  transition: opacity 0.5s ease;
+}
+
+.socialLinkContainer:hover {
+  opacity: 0.65;
+}

@@ -10,8 +10,8 @@ export default function ProjectsSection() {
       url: "test",
       image: "/ProjectHeroImages/DishmeisterImageHero.png",
       stack: ["React 19", "TypeScript", "Vite", "Supabase", "PWA"],
-      liveLink: "test",
-      sourceLink: "test",
+      liveLink: "https://www.dishmeister.com",
+      sourceLink: "https://github.com/KarampelasDS/Dishmeister",
     },
     {
       title: "LystMate",
@@ -27,8 +27,8 @@ export default function ProjectsSection() {
         "PostgreSQL",
         "PWA",
       ],
-      liveLink: "test",
-      sourceLink: "test",
+      liveLink: "https://www.lystmate.app",
+      sourceLink: "https://github.com/KarampelasDS/LystMate",
     },
     {
       title: "TuneSaver",
@@ -43,8 +43,8 @@ export default function ProjectsSection() {
         "Spotify API",
         "BeatSaver API",
       ],
-      liveLink: "test",
-      sourceLink: "test",
+      liveLink: "https://tunesaver.vercel.app/",
+      sourceLink: "https://github.com/KarampelasDS/TuneSaver",
     },
     {
       title: "WalletLogger",
@@ -53,8 +53,9 @@ export default function ProjectsSection() {
       url: "test",
       image: "/ProjectHeroImages/WalletLoggerImageHero.jpg",
       stack: ["React Native", "Expo", "SQLite", "Android"],
-      liveLink: "test",
-      sourceLink: "test",
+      liveLink: "https://github.com/KarampelasDS/WalletLogger/releases/latest",
+      sourceLink: "https://github.com/KarampelasDS/WalletLogger",
+      ctaText: "Download",
     },
   ];
   return (
@@ -71,6 +72,7 @@ export default function ProjectsSection() {
             stack={item.stack}
             liveLink={item.liveLink}
             sourceLink={item.sourceLink}
+            ctaText={item.ctaText}
           />
         ))}
       </div>
