@@ -1,0 +1,62 @@
+.carouselContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  background-color: var(--headerBackgroundActive);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  height: 100%;
+}
+
+.carouselThumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carouselButtonNext {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background-color: var(--headerBackgroundActive);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.carouselButtonPrevious {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  background-color: var(--headerBackgroundActive);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.carouselThumbnails img {
+  width: 100px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
