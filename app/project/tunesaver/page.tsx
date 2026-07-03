@@ -13,6 +13,7 @@ export default function Project() {
         liveUrl="https://tunesaver.vercel.app"
         sourceUrl="https://github.com/KarampelasDS/tunesaver"
         images={[
+          "/ProjectCarouselImages/TuneSaver/TuneSaverCarouselHero.png",
           "/ProjectCarouselImages/TuneSaver/TuneSaverCarousel1.png",
           "/ProjectCarouselImages/TuneSaver/TuneSaverCarousel2.png",
           "/ProjectCarouselImages/TuneSaver/TuneSaverCarousel3.png",

@@ -13,6 +13,7 @@ export default function Project() {
         liveUrl="https://www.lystmate.app"
         sourceUrl="https://github.com/KarampelasDS/LystMate"
         images={[
+          "/ProjectCarouselImages/LystMate/LystMateCarouselHero.png",
           "/ProjectCarouselImages/LystMate/LystMateCarousel1.png",
           "/ProjectCarouselImages/LystMate/LystMateCarousel2.png",
           "/ProjectCarouselImages/LystMate/LystMateCarousel3.png",

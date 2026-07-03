@@ -26,6 +26,8 @@
   overflow: hidden;
   height: 100%;
 }
+.carousel img {
+}
 
 .carouselSkeleton {
   width: 100%;

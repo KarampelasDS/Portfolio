@@ -18,6 +18,7 @@ export default function Project() {
         images={
           theme == "dark"
             ? [
+                "/ProjectCarouselImages/Dishmeister/DishmeisterCarouselHero.png",
                 "/ProjectCarouselImages/Dishmeister/DishmeisterCarouselDark1.png",
                 "/ProjectCarouselImages/Dishmeister/DishmeisterCarouselDark2.png",
                 "/ProjectCarouselImages/Dishmeister/DishmeisterCarouselDark3.png",
@@ -25,6 +26,7 @@ export default function Project() {
                 "/ProjectCarouselImages/Dishmeister/DishmeisterCarouselDark5.png",
               ]
             : [
+                "/ProjectCarouselImages/Dishmeister/DishmeisterCarouselHero.png",
                 "/ProjectCarouselImages/Dishmeister/DishmeisterCarouselLight1.png",
                 "/ProjectCarouselImages/Dishmeister/DishmeisterCarouselLight2.png",
                 "/ProjectCarouselImages/Dishmeister/DishmeisterCarouselLight3.png",
