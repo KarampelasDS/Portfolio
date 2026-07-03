@@ -64,8 +64,7 @@ export default function ExperienceSection() {
         "Computer Application Technician · Multimedia / Web Designer-Developer / Video Games",
       description:
         "Web development, programming fundamentals, multimedia applications, database design, and internet technologies.",
-      startDate: "Oct 2022",
-      endDate: "Jun 2024",
+      startDate: "Graduated 2024",
       image: "/GraduationCapImage.png",
     },
   ];
