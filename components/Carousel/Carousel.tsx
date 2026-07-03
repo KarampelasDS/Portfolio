@@ -6,7 +6,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 type CarouselProps = {
   images: string[];
-  zoomed: boolean;
+  zoomed?: boolean;
 };
 
 export default function Carousel({ images, zoomed }: CarouselProps) {
@@ -38,7 +38,7 @@ export default function Carousel({ images, zoomed }: CarouselProps) {
       <div className={styles.carouselThumbnails}>
         {images.map((image, index) => (
           <img
-            className={currentIndex == index && styles.activeSlide}
+            className={currentIndex == index ? styles.activeSlide : undefined}
             key={index}
             src={image}
             alt={`Slide ${index + 1}`}

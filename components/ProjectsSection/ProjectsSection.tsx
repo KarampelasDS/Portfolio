@@ -7,7 +7,7 @@ export default function ProjectsSection() {
       title: "Dishmeister",
       description:
         "A social-first recipe platform where food lovers share, discover and save recipes.",
-      url: "test",
+      url: "/project/dishmeister",
       image: "/ProjectHeroImages/DishmeisterImageHero.png",
       stack: ["React 19", "TypeScript", "Vite", "Supabase", "PWA"],
       liveLink: "https://www.dishmeister.com",
@@ -17,7 +17,7 @@ export default function ProjectsSection() {
       title: "LystMate",
       description:
         "Create, share and manage lists with friends and family.Manage your groceries,wishlist etc. in sync!",
-      url: "test",
+      url: "/project/lystmate",
       image: "/ProjectHeroImages/LystMateImageHero.png",
       stack: [
         "Next.js 16",
@@ -34,7 +34,7 @@ export default function ProjectsSection() {
       title: "TuneSaver",
       description:
         "Match your Spotify playlists to Beat Saber custom maps and download them automatically.",
-      url: "test",
+      url: "/project/tunesaver",
       image: "/ProjectHeroImages/TuneSaverImageHero.png",
       stack: [
         "Electron",
@@ -50,7 +50,7 @@ export default function ProjectsSection() {
       title: "WalletLogger",
       description:
         "An Offline, Privacy-First Android app to track multi-currency accounts, income, and expenses.",
-      url: "test",
+      url: "/project/walletlogger",
       image: "/ProjectHeroImages/WalletLoggerImageHero.jpg",
       stack: ["React Native", "Expo", "SQLite", "Android"],
       liveLink: "https://github.com/KarampelasDS/WalletLogger/releases/latest",

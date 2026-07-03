@@ -2,7 +2,7 @@
 
 import styles from "./Header.module.css";
 import { useState, useRef, useEffect } from "react";
-import { useTheme } from "@/hooks/useTheme";
+import { useThemeContext } from "@/components/ThemeProvider/ThemeProvider";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 type PillStyle = {
@@ -11,7 +11,7 @@ type PillStyle = {
 };
 
 export default function Header() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useThemeContext();
   const items = [
     { label: "Home", destination: "#home" },
     { label: "Stack", destination: "#stack" },

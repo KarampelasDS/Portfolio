@@ -28,15 +28,17 @@ export default function ProjectItem({
 }: ProjectItemProps) {
   return (
     <div className={styles.projectItemContainer}>
-      <Image
-        alt={title}
-        width={1488}
-        height={930}
-        src={image}
-        sizes="(max-width: 768px) 100vw, 530px"
-        quality={100}
-        className={styles.projectItemImage}
-      />
+      <a href={url}>
+        <Image
+          alt={title}
+          width={1488}
+          height={930}
+          src={image}
+          sizes="(max-width: 768px) 100vw, 530px"
+          quality={100}
+          className={styles.projectItemImage}
+        />
+      </a>
       <div className={styles.projectItemInfo}>
         <h3 className={styles.projectItemTitle}>{title}</h3>
         <h4 className={styles.projectItemDescription}>{description}</h4>
@@ -70,13 +72,15 @@ export default function ProjectItem({
           </Button>
         </a>
         <div className={styles.projectItemActionsSpacer}>
-          <Button
-            border="1px solid var(--border)"
-            hoverBackgroundColor="var(--headerBackground)"
-            fontSize="0.9rem"
-          >
-            Details <FaArrowRight />
-          </Button>
+          <a href={url}>
+            <Button
+              border="1px solid var(--border)"
+              hoverBackgroundColor="var(--headerBackground)"
+              fontSize="0.9rem"
+            >
+              Details <FaArrowRight />
+            </Button>
+          </a>
         </div>
       </div>
     </div>

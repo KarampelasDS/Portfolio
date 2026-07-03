@@ -12,6 +12,7 @@ type ProjectPageProps = {
   liveUrl: string;
   sourceUrl: string;
   images: string[];
+  imagesAlternative?: string[];
   overview: string;
   role: string;
   type: string;
@@ -21,7 +22,7 @@ type ProjectPageProps = {
   previousProject: string;
   nextProjectUrl: string;
   previousProjectUrl: string;
-  imagesZoom: boolean;
+  imagesZoom?: boolean;
 };
 
 export default function ProjectPage({
@@ -31,6 +32,7 @@ export default function ProjectPage({
   liveUrl,
   sourceUrl,
   images,
+  imagesAlternative,
   overview,
   role,
   type,
@@ -83,7 +85,10 @@ export default function ProjectPage({
         </div>
       </div>
       <div className={styles.projectPageCarousel}>
-        <Carousel images={images} zoomed={imagesZoom} />
+        <Carousel
+          images={imagesAlternative ? imagesAlternative : images}
+          zoomed={imagesZoom}
+        />
       </div>
       <div className={styles.projectPageContent}>
         <div className={styles.projectPageDetails}>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Schibsted_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import ThemeInitializer from "@/components/ThemeInitializer/ThemeInitializer";
+import { ThemeProvider } from "@/components/ThemeProvider/ThemeProvider";
 
 const schibsted = Schibsted_Grotesk({
   subsets: ["latin"],
@@ -47,7 +47,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <ThemeInitializer>{children}</ThemeInitializer>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
