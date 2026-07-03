@@ -141,12 +141,13 @@ export default function Header() {
             {item.label}
           </button>
         ))}
-        <button className={styles.headerItem} onClick={() => toggleTheme()}>
-          {theme === "dark" ? (
-            <MdDarkMode size={20} />
-          ) : (
-            <MdLightMode size={20} />
-          )}
+        <button
+          className={styles.headerItem}
+          onClick={() => toggleTheme()}
+          aria-label="Toggle theme"
+        >
+          <MdDarkMode size={20} className={styles.iconDark} />
+          <MdLightMode size={20} className={styles.iconLight} />
         </button>
       </div>
     </nav>

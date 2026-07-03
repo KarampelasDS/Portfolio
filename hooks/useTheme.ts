@@ -4,8 +4,18 @@ import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
+function getInitialTheme(): Theme {
+  if (typeof document !== "undefined") {
+    const attr = document.documentElement.getAttribute(
+      "data-theme",
+    ) as Theme | null;
+    if (attr) return attr;
+  }
+  return "dark"; // server render fallback
+}
+
 export function useTheme() {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme") as Theme | null;
