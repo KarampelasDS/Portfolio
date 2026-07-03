@@ -21,6 +21,7 @@ type ProjectPageProps = {
   previousProject: string;
   nextProjectUrl: string;
   previousProjectUrl: string;
+  imagesZoom: boolean;
 };
 
 export default function ProjectPage({
@@ -39,6 +40,7 @@ export default function ProjectPage({
   previousProject,
   previousProjectUrl,
   nextProjectUrl,
+  imagesZoom,
 }: ProjectPageProps) {
   return (
     <div className={styles.projectPage}>
@@ -81,7 +83,7 @@ export default function ProjectPage({
         </div>
       </div>
       <div className={styles.projectPageCarousel}>
-        <Carousel images={images} />
+        <Carousel images={images} zoomed={imagesZoom} />
       </div>
       <div className={styles.projectPageContent}>
         <div className={styles.projectPageDetails}>

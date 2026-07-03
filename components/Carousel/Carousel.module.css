@@ -4,6 +4,17 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin: auto;
+}
+
+.carouselContainerZoomed {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: auto;
 }
 
 .carousel {
@@ -36,6 +47,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 1;
 }
 
 .carouselButtonPrevious {
@@ -52,6 +64,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 1;
 }
 
 .carouselThumbnails img {
@@ -59,4 +72,22 @@
   border-radius: 12px;
   border: 1px solid var(--border);
   cursor: pointer;
+}
+
+.activeSlide {
+  border: 2px solid var(--accent) !important;
+}
+
+.carouselZoomed {
+  position: relative;
+  width: 100%;
+  background-color: var(--headerBackgroundActive);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  height: 100%;
+}
+
+.carouselZoomed img {
+  transform: scale(1.3);
 }

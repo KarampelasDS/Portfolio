@@ -6,14 +6,19 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 type CarouselProps = {
   images: string[];
+  zoomed: boolean;
 };
 
-export default function Carousel({ images }: CarouselProps) {
+export default function Carousel({ images, zoomed }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <div className={styles.carouselContainer}>
-      <div className={styles.carousel}>
+    <div
+      className={
+        zoomed ? styles.carouselContainerZoomed : styles.carouselContainer
+      }
+    >
+      <div className={zoomed ? styles.carouselZoomed : styles.carousel}>
         <button
           className={styles.carouselButtonPrevious}
           onClick={() =>
@@ -33,6 +38,7 @@ export default function Carousel({ images }: CarouselProps) {
       <div className={styles.carouselThumbnails}>
         {images.map((image, index) => (
           <img
+            className={currentIndex == index && styles.activeSlide}
             key={index}
             src={image}
             alt={`Slide ${index + 1}`}
