@@ -27,6 +27,11 @@
   height: 100%;
 }
 
+.carouselSkeleton {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
 .carouselThumbnails {
   display: flex;
   justify-content: center;

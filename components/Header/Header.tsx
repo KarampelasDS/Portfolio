@@ -2,6 +2,7 @@
 
 import styles from "./Header.module.css";
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useThemeContext } from "@/components/ThemeProvider/ThemeProvider";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
@@ -12,18 +13,27 @@ type PillStyle = {
 
 export default function Header() {
   const { theme, toggleTheme } = useThemeContext();
+  const isRoot = usePathname() === "/";
   const items = [
     { label: "Home", destination: "#home" },
     { label: "Stack", destination: "#stack" },
     { label: "Experience", destination: "#experience" },
     { label: "Projects", destination: "#projects" },
   ];
-  const [selected, setSelected] = useState("Home");
+  const [selected, setSelected] = useState(isRoot ? "Home" : "");
   const [pillStyle, setPillStyle] = useState<PillStyle>({ width: 0, left: 0 });
   const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const isClickScrolling = useRef(false);
 
   const handleClick = (item: string, index: number) => {
+    if (!isRoot) {
+      if (item == "Home") {
+        window.location.replace("/");
+        return;
+      }
+      window.location.replace(`/#${item.toLowerCase()}`);
+      return;
+    }
     setSelected(item);
     const btn = itemRefs.current[index];
     if (btn) setPillStyle({ width: btn.offsetWidth, left: btn.offsetLeft });
@@ -43,11 +53,6 @@ export default function Header() {
     }
   };
 
-  useEffect(() => {
-    const el = itemRefs.current[0];
-    if (el) setPillStyle({ width: el.offsetWidth, left: el.offsetLeft });
-  }, []);
-
   const updatePill = () => {
     const selectedIndex = items.findIndex((item) => item.label === selected);
     const el = itemRefs.current[selectedIndex];
@@ -57,6 +62,9 @@ export default function Header() {
         width: el.offsetWidth,
         left: el.offsetLeft,
       });
+    } else {
+      // No active item (e.g. off the root page) — hide the pill.
+      setPillStyle({ width: 0, left: 0 });
     }
   };
 
