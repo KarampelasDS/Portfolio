@@ -12,6 +12,11 @@
     box-shadow 0.15s ease;
 }
 
+.projectItemContainer a:first-child {
+  overflow: hidden;
+  border-radius: 12px 12px 0px 0px;
+}
+
 .projectItemContainer:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 28px -10px rgba(0, 0, 0, 0.55);
@@ -25,6 +30,13 @@
   object-fit: cover;
   border-radius: 12px 12px 0px 0px;
   border: 1px solid var(--headerBackground);
+  overflow: hidden;
+  transition: 0.15s ease;
+}
+
+.projectItemImage:hover {
+  scale: 1.05;
+  overflow: hidden;
 }
 
 .projectItemInfo {

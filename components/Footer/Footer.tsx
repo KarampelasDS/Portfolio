@@ -36,7 +36,7 @@ export default function Footer() {
           <div className={styles.footerText}>
             <div className={styles.footerName}>Dimitris Karampelas</div>
             <div className={styles.footerSubtext}>
-              Full-stack Engineer · React · TypeScript · Node.js
+              Full-stack Engineer · Next.js · React · TypeScript · Node.js
             </div>
           </div>
         </div>
