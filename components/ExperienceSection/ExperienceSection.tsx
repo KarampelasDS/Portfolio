@@ -40,6 +40,7 @@ export default function ExperienceSection() {
       description:
         "React, advanced JavaScript, HTML and CSS in depth, version control, UX/UI principles, and coding interview preparation.",
       startDate: "Issued 2025",
+      endDate: undefined,
       image: "/Meta.png",
     },
     {
@@ -48,6 +49,7 @@ export default function ExperienceSection() {
       description:
         "User research, information architecture, wireframing, prototyping, visual design, and accessibility considerations.",
       startDate: "Issued 2024",
+      endDate: undefined,
       image: "/Microsoft.png",
     },
     {
@@ -101,7 +103,7 @@ export default function ExperienceSection() {
               title={item.title}
               subtitle={item.subtitle}
               startDate={item.startDate}
-              endDate={item?.endDate}
+              endDate={item.endDate}
               description={item.description}
               image={item.image}
               variant="work"
@@ -117,7 +119,7 @@ export default function ExperienceSection() {
               title={item.title}
               subtitle={item.subtitle}
               startDate={item.startDate}
-              endDate={item?.endDate}
+              endDate={item.endDate}
               description={item.description}
               image={item.image}
               variant="education"
