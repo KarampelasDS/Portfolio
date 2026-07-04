@@ -98,3 +98,9 @@
 .carouselZoomed img {
   transform: scale(1.3);
 }
+
+@media only screen and (max-width: 900px) {
+  .carouselThumbnails {
+    display: none;
+  }
+}
