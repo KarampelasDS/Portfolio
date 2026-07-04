@@ -37,7 +37,7 @@ export default function HeroSection() {
             <SiGithub />
             GitHub
           </SocialLink>
-          <SocialLink href="mailto:24dimitris@gmail.com">
+          <SocialLink href="mailto:karampelas.ds@gmail.com">
             <MdMailOutline style={{ fontSize: "1.2rem" }} />
             Email
           </SocialLink>
