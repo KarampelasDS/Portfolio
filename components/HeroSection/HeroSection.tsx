@@ -43,15 +43,20 @@ export default function HeroSection() {
           </SocialLink>
         </div>
         <div className={styles.heroButtons}>
-          <Button
-            backgroundColor="var(--accent)"
-            textColor="var(--background)"
-            fontSize="1rem"
-            hoverBackgroundColor="var(--accent-hover)"
+          <a
+            href="/Dimitris-Karampelas-CV.pdf"
+            download="Dimitris Karampelas - CV.pdf"
           >
-            Download CV
-            <MdOutlineFileDownload size={20} />
-          </Button>
+            <Button
+              backgroundColor="var(--accent)"
+              textColor="var(--background)"
+              fontSize="1rem"
+              hoverBackgroundColor="var(--accent-hover)"
+            >
+              Download CV
+              <MdOutlineFileDownload size={20} />
+            </Button>
+          </a>
           <a href="https://calendly.com/24dimitris/30min" target="_blank">
             <Button
               border="solid 1px var(--text-muted)"

@@ -15,9 +15,9 @@ export default function ExperienceSection() {
   const workItems = [
     {
       title: "COSMOTE TELEKOM",
-      subtitle: "Frontend Engineer",
+      subtitle: "Full-Stack Engineer",
       description:
-        "Worked across two teams simultaneously on one of Greece's highest-traffic platforms serving millions of users annually. Within the frontend team, continued driving the COSMOTE to COSMOTE TELEKOM rebrand migration, collaborating closely with design to bring over 600 pages to a new design system with updated visual identity, colour schemes, and responsive media. Additionally joined the fullstack team, taking ownership of critical user-facing React components, working directly from design handoffs through to production in close collaboration with backend engineers.",
+        "Worked across two teams simultaneously on one of Greece's highest-traffic platforms serving millions of users annually. Within the frontend team, continued driving the COSMOTE to COSMOTE TELEKOM rebrand, collaborating closely with design to bring over 600 pages to a new design system with updated visual identity, colour schemes, and responsive media. Additionally joined the fullstack team, taking ownership of 2 platform-wide React components including the site header and minicart, rendered on every user journey, with the header built on a CMS-driven architecture so other teams manage its content independently. Took the platform from no accessibility support to WCAG compliance, reaching 90%+ Lighthouse scores across all pages, verified by an external audit.",
       startDate: "Apr 2025",
       endDate: "Present",
       image: "/CosmoteTelekom.png",
@@ -26,7 +26,7 @@ export default function ExperienceSection() {
       title: "COSMOTE TELEKOM",
       subtitle: "Frontend Engineer Intern",
       description:
-        "Contributed to live production features from day one, working across HTML, CSS, JavaScript and CMS-driven pages within a large legacy codebase. Began work on the COSMOTE to COSMOTE TELEKOM rebrand, a migration of over 600 pages to a new design system, carrying that work through to the FTE role.",
+        "Contributed to live production features from day one, working across HTML, CSS, JavaScript and CMS-driven pages within a large legacy codebase. Built 6+ reusable CMS HTML templates used across all product pages. Contributed to SEO optimisation across product pages, improving discoverability by updating existing pages and removing outdated pages hijacking search results. Began work on the COSMOTE to COSMOTE TELEKOM rebrand, a migration of over 600 pages to a new design system, carrying that work through to the FTE role.",
       startDate: "Oct 2024",
       endDate: "Apr 2025",
       image: "/CosmoteTelekom.png",
