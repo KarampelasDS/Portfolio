@@ -25,7 +25,7 @@ export default function HeroSection() {
           Full-stack engineer with a frontend soul.
         </h2>
         <div className={styles.heroInfo}>
-          📍 Athens, Greece
+          📍 Utrecht, Netherlands
           <SocialLink
             href="https://www.linkedin.com/in/dimitriskarampelas/"
             target="_blank"
