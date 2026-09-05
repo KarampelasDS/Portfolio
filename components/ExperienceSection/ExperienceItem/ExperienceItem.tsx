@@ -48,7 +48,7 @@ export default function ExperienceItem({
               {endDate && <span> - {endDate}</span>}
             </div>
           </div>
-          <div className={styles.experienceItemDescription}>{description}</div>
+          <div className={styles.experienceItemDescription} dangerouslySetInnerHTML={{ __html: description }} />
         </div>
       </div>
     </div>

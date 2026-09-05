@@ -14,22 +14,22 @@ export default function ExperienceSection() {
 
   const workItems = [
     {
-      title: "COSMOTE TELEKOM",
+      title: "TELEKOM (formerly COSMOTE)",
       subtitle: "Full-Stack Engineer",
       description:
-        "Worked across two teams simultaneously on one of Greece's highest-traffic platforms serving millions of users annually. Within the frontend team, continued driving the COSMOTE to COSMOTE TELEKOM rebrand, collaborating closely with design to bring over 600 pages to a new design system with updated visual identity, colour schemes, and responsive media. Additionally joined the fullstack team, taking ownership of 2 platform-wide React components including the site header and minicart, rendered on every user journey, with the header built on a CMS-driven architecture so other teams manage its content independently. Took the platform from no accessibility support to WCAG compliance, reaching 90%+ Lighthouse scores across all pages, verified by an external audit.",
-      startDate: "Apr 2025",
-      endDate: "Present",
-      image: "/CosmoteTelekom.png",
+        "<p>Worked across both the frontend and backend teams on one of Greece&#39;s highest-traffic platforms (telekom.gr, formerly cosmote.gr), serving millions of users annually.</p><br/><ul style='list-style:disc'><li>Delivered two complete site rebrands in close succession (COSMOTE to COSMOTE TELEKOM, then COSMOTE TELEKOM to TELEKOM), personally owning migration of 1,200+ pages across English and Greek each time to a new design system, including architectural code changes.</li><li>Partnered with the design and legal teams to finalize the design system, visual identities, and new names for close to 600 products.</li><li>Introduced React to the legacy platform via an islands architecture during the second rebrand, its first React footprint and now the foundation for its interactive components.</li><li>Built and owned the header, footer and minicart (including combo and couponing logic) rendered on every user journey, with the header on a CMS-driven architecture so other teams manage its content independently.</li><li>Shipped both rebrands on their fixed launch dates with near-zero downtime, cutting over at midnight to minimize user impact.</li><li>Ran A/B tests across 4 checkout flows and 2 SPAs to inform product and conversion decisions.</li><li>Took the platform from no accessibility support to WCAG compliance, reaching 90%+ Lighthouse scores across all pages, verified by an external audit.</li></ul>",
+      startDate: "Jan 2024",
+      endDate: "Sep 2026",
+      image: "/Telekom.png",
     },
     {
-      title: "COSMOTE TELEKOM",
+      title: "TELEKOM (formerly COSMOTE)",
       subtitle: "Frontend Engineer Intern",
       description:
-        "Contributed to live production features from day one, working across HTML, CSS, JavaScript and CMS-driven pages within a large legacy codebase. Built 6+ reusable CMS HTML templates used across all product pages. Contributed to SEO optimisation across product pages, improving discoverability by updating existing pages and removing outdated pages hijacking search results. Began work on the COSMOTE to COSMOTE TELEKOM rebrand, a migration of over 600 pages to a new design system, carrying that work through to the FTE role.",
-      startDate: "Oct 2024",
-      endDate: "Apr 2025",
-      image: "/CosmoteTelekom.png",
+        "<p>Contributed to live production features from day one within a large legacy codebase on one of Greece&#39;s highest-traffic platforms.</p> <br/> <ul style='list-style:disc'><li>Worked across HTML, CSS, JavaScript and CMS-driven pages.</li><li>Built 6+ reusable CMS HTML templates used across all product pages spanning multiple categories.</li><li>Contributed to SEO optimisation across product pages, improving discoverability by updating existing pages and removing outdated pages that were hijacking search results.</li></ul>",
+      startDate: "Jun 2023",
+      endDate: "Dec 2023",
+      image: "/Telekom.png",
     },
   ];
 
